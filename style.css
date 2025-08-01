@@ -13,7 +13,7 @@ button{
     position: relative;
     display: flex !important;
     max-width: 100vw;
-    background: url('./../Assets/Background01.png');
+    background: url('./Assets/Background01.webp');
     background-repeat: no-repeat;
     background-size: cover;
 }
