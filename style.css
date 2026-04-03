@@ -306,6 +306,7 @@ button {
     font-weight: 600;
     background: var(--gradient-glow);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -758,110 +759,423 @@ footer {
     font-weight: 600;
 }
 
-/* Responsive Design */
+/* =====================
+   RESPONSIVE DESIGN
+   ===================== */
+
+/* --- Tablet (≤900px) --- */
 @media screen and (max-width: 900px) {
     .hero-section {
         flex-direction: column-reverse;
-        padding-top: 140px;
+        padding-top: 130px;
+        padding-bottom: 60px;
         text-align: center;
+        gap: 20px;
     }
-    
+
+    .left-con, .right-con {
+        flex: unset;
+        width: 100%;
+    }
+
     .socials-con {
         justify-content: center;
     }
-    
+
+    .intro-con .name {
+        font-size: 60px;
+    }
+
+    .right-bottom img {
+        height: 380px;
+    }
+
     .project {
         flex-direction: column !important;
     }
-    
+
     .project-image img {
         max-width: 100%;
     }
+
+    .key-points-con {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
+        gap: 20px;
+    }
 }
 
+/* --- Mobile (≤768px) --- */
 @media screen and (max-width: 768px) {
+    /* Nav */
     .glass-nav {
-        padding: 15px 20px;
-        border-radius: 20px;
+        top: 12px;
+        width: 94%;
+        padding: 12px 18px;
+        border-radius: 18px;
     }
-    
+
     .navbar-control label {
         display: flex;
+        z-index: 1001;
+        position: relative;
     }
-    
+
     .nav-links {
         display: none;
         position: fixed;
-        top: 80px;
-        left: 5%;
-        width: 90%;
+        top: 72px;
+        left: 3%;
+        width: 94%;
         flex-direction: column;
-        padding: 40px 20px;
+        align-items: center;
+        padding: 32px 24px;
         border-radius: 20px;
-        gap: 24px;
+        gap: 20px;
         z-index: 999;
+        background: rgba(15, 23, 42, 0.92);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.08);
     }
-    
+
     .navbar-control input:checked ~ .nav-links {
         display: flex;
         animation: fadeIn 0.3s ease;
     }
+
+
+    .navbar-control .close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
     
+    .navbar-control .close .close-lbl {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: 'Outfit', sans-serif;
+        color: var(--text-secondary);
+        padding: 2px 30px;
+        border-radius: 30px;
+        background-color: #1e293b;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        transition: color 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+    }
+
+    .navbar-control .close label:hover {
+        color: var(--text-primary);
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(192, 132, 252, 0.4);
+    }
+
+    .navbar-control .close label span {
+        font-size: 18px;
+        background: var(--gradient-glow);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+
+    .nav-links a {
+        font-size: 18px;
+    }
+
+    /* Hero */
+    .hero-section {
+        padding-top: 110px;
+        gap: 30px;
+    }
+
+    .intro-con .intro {
+        font-size: 18px;
+    }
+
     .intro-con .name {
-        font-size: 52px;
+        font-size: 48px;
     }
-    
+
+    .intro-con .field {
+        font-size: 20px;
+    }
+
+    .right-bottom img {
+        height: 320px;
+    }
+
+    .img-glow {
+        width: 220px;
+        height: 220px;
+    }
+
+    /* Sections */
     .section-title {
-        font-size: 32px;
+        font-size: 30px;
     }
-    
-    .skills-con {
+
+    section {
+        padding: 70px 16px;
+    }
+
+    /* About */
+    .about .intro {
+        font-size: 16px;
+        margin: 32px auto 48px;
+    }
+
+    .key-points {
         padding: 24px;
     }
-    
-    .experience-timeline::before {
-        left: 20px;
+
+    .key-points h3 {
+        font-size: 18px;
     }
+
+    /* Skills */
+    .skills-con {
+        padding: 24px 20px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 16px;
+    }
+
+    .skill-item img {
+        height: 40px;
+    }
+
+    .skill-item span {
+        font-size: 12px;
+    }
+
+    /* Experience / Education */
+    .experience-timeline {
+        margin-top: 36px;
+    }
+
+    .experience-timeline::before {
+        left: 16px;
+    }
+
     .exp-item {
         margin-left: 0;
-        gap: 20px;
+        gap: 16px;
+        padding: 20px;
         flex-direction: column;
         align-items: flex-start;
     }
+
     .exp-item::before {
-        left: -8px;
-        top: 40px;
+        left: -10px;
+        top: 34px;
         transform: none;
+        width: 12px;
+        height: 12px;
     }
 
-    .contact-wrapper {
+    .exp-logo {
+        width: 64px;
+        height: 64px;
+    }
+
+    .exp-content h3 {
+        font-size: 20px;
+    }
+
+    .exp-content .company {
+        font-size: 15px;
+    }
+
+    /* Projects */
+    .project-section {
+        gap: 28px;
+    }
+
+    .project {
         padding: 24px;
+        gap: 20px;
+    }
+
+    .project h4 {
+        font-size: 22px;
+    }
+
+    .project p {
+        font-size: 14px;
+    }
+
+    /* Contact */
+    .contact-wrapper {
+        padding: 28px 20px;
+        margin-top: 36px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 15px;
+        padding: 14px;
+    }
+
+    .form-submit {
+        font-size: 16px;
+        padding: 14px;
     }
 }
 
+/* --- Small Mobile (≤480px) --- */
 @media screen and (max-width: 480px) {
+    .glass-nav {
+        top: 8px;
+        width: 96%;
+        padding: 10px 16px;
+    }
+
+    .nav-brand img {
+        height: 28px;
+    }
+
+    .hero-section {
+        padding-top: 96px;
+        gap: 24px;
+    }
+
+    .intro-con .intro {
+        font-size: 16px;
+    }
+
     .intro-con .name {
         font-size: 38px;
+        margin: 6px 0;
     }
-    
+
     .intro-con .field {
         font-size: 18px;
     }
-    
+
+    .intro-con {
+        margin-bottom: 28px;
+    }
+
+    .social {
+        width: 42px;
+        height: 42px;
+    }
+
     .right-bottom img {
-        height: 350px;
+        height: 270px;
     }
-    
+
+    .img-glow {
+        width: 160px;
+        height: 160px;
+    }
+
     section {
-        padding: 60px 15px;
+        padding: 56px 14px;
     }
-    
-    .project {
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .key-points-con {
+        gap: 20px;
+    }
+
+    .key-points {
         padding: 20px;
+    }
+
+    .icon-wrapper {
+        font-size: 26px;
+        width: 52px;
+        height: 52px;
+    }
+
+    .skills-con {
+        padding: 20px 14px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+        gap: 14px;
+    }
+
+    .skill-item img {
+        height: 36px;
+    }
+
+    .exp-item {
+        padding: 16px;
+    }
+
+    .exp-logo {
+        width: 54px;
+        height: 54px;
+    }
+
+    .exp-content h3 {
+        font-size: 18px;
+    }
+
+    .project {
+        padding: 18px;
+    }
+
+    .project h4 {
+        font-size: 20px;
+    }
+
+    .proj-badge {
+        font-size: 11px;
+    }
+
+    .contact-wrapper {
+        padding: 22px 14px;
+    }
+
+    footer {
+        padding: 24px 16px;
+        font-size: 14px;
+    }
+}
+
+/* --- Extra Small (≤360px) --- */
+@media screen and (max-width: 360px) {
+    .intro-con .name {
+        font-size: 32px;
+    }
+
+    .intro-con .field {
+        font-size: 16px;
+    }
+
+    .right-bottom img {
+        height: 230px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+        gap: 12px;
     }
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
+    from { opacity: 0; transform: translateY(-12px); }
     to { opacity: 1; transform: translateY(0); }
 }
