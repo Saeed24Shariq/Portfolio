@@ -1,22 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shariq Saeed | Frontend Developer Portfolio</title>
+    <title>Shariq Saeed | Backend AI Developer | Java Spring Boot & Microservices</title>
 
     <!-- Primary SEO -->
-    <meta name="description" content="Shariq Saeed is a Frontend Developer specializing in React, Next.js, and modern web technologies. Explore his projects, skills, and experience.">
-    <meta name="keywords" content="Shariq Saeed, Frontend Developer, React Developer, Next.js, Web Developer Portfolio, HTML CSS JavaScript, Tailwind CSS, MongoDB, Express.js">
+    <meta name="description"
+        content="Shariq Saeed is a Backend AI Developer specializing in Java Spring Boot, Microservices Architecture, AI Model Integrations, and scalable cloud APIs. Explore projects and technical skills.">
+    <meta name="keywords"
+        content="Shariq Saeed, Backend AI Developer, Java Spring Boot, Microservice Architecture, Spring Cloud, Microservices, Java Developer, REST APIs, AI Integration, Python, MongoDB, SQL">
     <meta name="author" content="Shariq Saeed">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#0f0f1a">
+    <meta name="theme-color" content="#090d16">
 
     <!-- Open Graph (Facebook, LinkedIn) -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Shariq Saeed | Frontend Developer Portfolio">
-    <meta property="og:description" content="Frontend Developer specializing in React, Next.js, and modern web technologies. Building responsive, user-friendly web interfaces.">
+    <meta property="og:title" content="Shariq Saeed | Backend AI Developer | Java Spring Boot & Microservices">
+    <meta property="og:description"
+        content="Backend AI Developer specializing in Java Spring Boot, Microservice Architecture, AI integrations, and scalable backend systems.">
     <meta property="og:image" content="Assets/ME.png">
     <meta property="og:url" content="https://saeed24shariq.github.io/Portfolio/">
     <meta property="og:site_name" content="Shariq Saeed Portfolio">
@@ -24,8 +27,9 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Shariq Saeed | Frontend Developer Portfolio">
-    <meta name="twitter:description" content="Frontend Developer specializing in React, Next.js, and modern web technologies. Building responsive, user-friendly web interfaces.">
+    <meta name="twitter:title" content="Shariq Saeed | Backend AI Developer | Java Spring Boot & Microservices">
+    <meta name="twitter:description"
+        content="Backend AI Developer specializing in Java Spring Boot, Microservice Architecture, AI integrations, and scalable backend systems.">
     <meta name="twitter:image" content="Assets/ME.png">
 
     <!-- Structured Data (JSON-LD) -->
@@ -34,348 +38,1366 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Shariq Saeed",
-      "jobTitle": "Frontend Developer",
+      "jobTitle": "Backend AI Developer in Java Spring Boot & Microservices",
       "url": "https://saeed24shariq.github.io/Portfolio/",
       "email": "shariqggood@gmail.com",
       "sameAs": [
         "https://github.com/Saeed24Shariq",
         "https://pk.linkedin.com/in/shariqsaeed24"
       ],
-      "knowsAbout": ["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind CSS", "MongoDB", "Express.js"]
+      "knowsAbout": ["Java Spring Boot", "Microservices Architecture", "System Design", "Project Management", "Project Planning", "gRPC", "Apache Kafka", "AI Model Integration", "Qdrant Vector DB", "Java", "Python", "REST APIs", "SQL", "MongoDB", "React", "Next.js", "Astro", "Docker", "Git"]
     }
     </script>
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+
     <link rel="shortcut icon" href="./Assets/Logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Ambient Background -->
-    <div class="ambient-background">
-        <div class="glow-orb orb-1"></div>
-        <div class="glow-orb orb-2"></div>
-        <div class="glow-orb orb-3"></div>
+    <!-- Mouse Cursor Glow Spotlight -->
+    <div class="mouse-spotlight" id="mouseSpotlight"></div>
+
+    <!-- Ambient Mesh Orbs -->
+    <div class="ambient-background" aria-hidden="true">
+        <div class="glow-orb orb-cyan"></div>
+        <div class="glow-orb orb-purple"></div>
+        <div class="glow-orb orb-emerald"></div>
+        <div class="grid-overlay"></div>
     </div>
 
-    <div class="main">
-        <nav class="glass-nav">
-            <div class="nav-brand">
-                <img class="logo white" src="Assets/LogoWhite.svg" alt="Logo" onerror="this.src='./Assets/Logo.svg'" />
-            </div>
-            
-            <div class="navbar-control">
-                <label for="chk"><span></span><span></span><span></span></label>
-                <input type="checkbox" name="chk" id="chk" />
-                <ul class="nav-links">
-                    <li><a href="#about" onclick="document.getElementById('chk').checked = false;">About me</a></li>
-                    <li><a href="#skills" onclick="document.getElementById('chk').checked = false;">Skills</a></li>
-                    <li><a href="#education" onclick="document.getElementById('chk').checked = false;">Education</a></li>
-                    <li><a href="#experience" onclick="document.getElementById('chk').checked = false;">Experience</a></li>
-                    <li><a href="#project" onclick="document.getElementById('chk').checked = false;">Projects</a></li>
-                    <li>
-                        <a href="#contact" onclick="document.getElementById('chk').checked = false;"><button class="btn-primary">Contact Me</button></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
 
-        <section class="hero-section">
-            <div class="left-con">
-                <div class="intro-con">
-                    <span class="intro">Hi, I am</span><br />
-                    <span class="name">Shariq Saeed</span><br />
-                    <span class="field">Front-end Developer</span>
+        <!-- Navigation Bar -->
+        <header class="glass-nav-container">
+            <nav class="glass-nav" aria-label="Main Navigation">
+                <a href="#" class="nav-brand" aria-label="Shariq Saeed Home">
+                    <img class="logo" src="Assets/LogoWhite.svg" alt="Shariq Saeed Logo"
+                        onerror="this.src='./Assets/Logo.svg'" />
+                    <span class="brand-text">Shariq<span class="brand-accent">.dev</span></span>
+                </a>
+
+                <div class="navbar-control">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu"
+                        aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#skills" class="nav-link">Skills</a></li>
+                        <li><a href="#experience" class="nav-link">Experience</a></li>
+                        <li><a href="#education" class="nav-link">Education</a></li>
+                        <li><a href="#project" class="nav-link">Projects</a></li>
+                        <li class="nav-cta-item">
+                            <a href="#contact" class="btn-primary nav-btn">
+                                <span>Get in Touch</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="socials-con">
-                    <a class="social glass-panel" href="mailto:shariqggood@gmail.com" target="_blank" aria-label="Email">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-content">
+                <h1 class="hero-title fade-up">
+                    Architecting resilient <br />
+                    <span class="text-gradient">AI & backend microservices.</span>
+                </h1>
+
+                <p class="hero-description fade-up">
+                    Hi, I'm <strong class="highlight-text">Shariq Saeed</strong>. I specialize in designing scalable
+                    backend systems, microservices architectures, AI integrations, and high-throughput enterprise
+                    RESTful APIs using Java Spring Boot.
+                </p>
+
+                <div class="hero-actions fade-up">
+                    <a href="#contact" class="btn-primary btn-lg">
+                        <span>Contact Me</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
                     </a>
-                    <a class="social glass-panel" href="https://github.com/Saeed24Shariq" target="_blank" aria-label="Github">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                    <a href="#project" class="btn-secondary btn-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                        <span>Explore Projects</span>
                     </a>
-                    <a class="social glass-panel" href="https://pk.linkedin.com/in/shariqsaeed24" target="_blank" aria-label="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                    </a>
+                </div>
+
+                <div class="socials-wrapper fade-up">
+                    <span class="socials-label">Connect with me:</span>
+                    <div class="socials-con">
+                        <a class="social glass-card" href="mailto:shariqggood@gmail.com" target="_blank"
+                            aria-label="Send Email" title="shariqggood@gmail.com">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            </svg>
+                        </a>
+                        <a class="social glass-card" href="https://github.com/Saeed24Shariq" target="_blank"
+                            rel="noopener noreferrer" aria-label="GitHub Profile" title="GitHub Profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                </path>
+                                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                            </svg>
+                        </a>
+                        <a class="social glass-card" href="https://pk.linkedin.com/in/shariqsaeed24" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn Profile" title="LinkedIn Profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="right-con">
-                <div class="right-bottom">
-                    <img src="Assets/ME.png" alt="ME" />
-                    <div class="img-glow"></div>
+
+            <div class="hero-visual fade-up">
+                <div class="avatar-frame">
+                    <div class="avatar-glow-ring"></div>
+                    <img src="Assets/ME.png" alt="Shariq Saeed - Backend AI Developer" class="avatar-img" />
+
+                    <!-- Floating Micro Badges -->
+                    <div class="float-badge badge-react">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+                            alt="Spring Boot" />
+                        <span>Spring Boot</span>
+                    </div>
+
+                    <div class="float-badge badge-next">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                            alt="Java Microservices" />
+                        <span>Microservices</span>
+                    </div>
+
+                    <div class="float-badge badge-exp">
+                        <span class="exp-number">1+</span>
+                        <span class="exp-text">Years Exp.</span>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar-container fade-up">
+            <div class="stats-grid glass-panel">
+                <div class="stat-card">
+                    <span class="stat-value">1+</span>
+                    <span class="stat-label">Years Backend & Systems Dev Exp.</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-card">
+                    <span class="stat-value">10+</span>
+                    <span class="stat-label">Completed Systems & Microservice Projects</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-card">
+                    <span class="stat-value">100%</span>
+                    <span class="stat-label">Scalable Backend Architecture & Security</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Me Section -->
+        <section class="section-container about-section" id="about">
+            <div class="section-header fade-up">
+                <span class="section-tagline">WHO I AM</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-bio glass-panel fade-up">
+                    <h3>Passionate About Distributed Systems & AI</h3>
+                    <p>
+                        I specialize in architecting resilient backend microservices, enterprise Java Spring Boot
+                        applications, and integrating AI models into production-ready software ecosystems. With a strong
+                        foundation in computer science and backend engineering, I focus on building high-performance,
+                        fault-tolerant distributed systems.
+                    </p>
+                    <div class="bio-attributes">
+                        <div class="attribute-pill">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Microservices & Spring Cloud</span>
+                        </div>
+                        <div class="attribute-pill">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Java Spring Boot & Security</span>
+                        </div>
+                        <div class="attribute-pill">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>AI Model Integrations & REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pillars-container">
+                    <div class="pillar-card glass-panel fade-up">
+                        <div class="pillar-icon">⚙️</div>
+                        <div class="pillar-info">
+                            <h4>Backend Engineering & Microservices</h4>
+                            <p>Designing scalable, event-driven, and decoupled microservices with Java Spring Boot,
+                                Spring Cloud, RESTful APIs, and distributed data layers.</p>
+                        </div>
+                    </div>
+
+                    <div class="pillar-card glass-panel fade-up">
+                        <div class="pillar-icon">🧠</div>
+                        <div class="pillar-info">
+                            <h4>AI & Intelligence Integration</h4>
+                            <p>Connecting backend pipelines with LLMs, AI agents, machine learning APIs, and automated
+                                data processing workflows.</p>
+                        </div>
+                    </div>
+
+                    <div class="pillar-card glass-panel fade-up">
+                        <div class="pillar-icon">⚡</div>
+                        <div class="pillar-info">
+                            <h4>System Performance & Database Design</h4>
+                            <p>Optimizing SQL/NoSQL query execution, caching strategies, distributed transaction safety,
+                                and enterprise clean architecture.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section class="section-container skills-section" id="skills">
+            <div class="section-header fade-up">
+                <span class="section-tagline">MY TOOLBOX</span>
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="skills-wrapper glass-panel fade-up">
+
+                <!-- Category 1: Backend AI & Microservices -->
+                <div class="skills-category-block">
+                    <h3 class="category-title">
+                        <span class="category-icon">⚙️</span>
+                        Backend AI & Microservices Architecture
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" title="Java Spring Boot">
+                            <div class="skill-icon-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+                                    alt="Spring Boot" />
+                            </div>
+                            <span>Spring Boot</span>
+                        </div>
+                        <div class="skill-card" title="Microservices Architecture">
+                            <div class="skill-icon-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                    alt="Microservices Architecture" />
+                            </div>
+                            <span>Microservices</span>
+                        </div>
+                        <div class="skill-card" title="gRPC Framework">
+                            <div class="skill-icon-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grpc/grpc-original.svg"
+                                    alt="gRPC"
+                                    onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grpc/grpc-plain.svg'; this.style.filter='invert(1)'" />
+                            </div>
+                            <span>gRPC</span>
+                        </div>
+                        <div class="skill-card" title="Apache Kafka Event Streaming">
+                            <div class="skill-icon-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg"
+                                    alt="Kafka" style="filter: invert(1);" />
+                            </div>
+                            <span>Kafka</span>
+                        </div>
+                        <div class="skill-card" title="SQL & Relational Databases">
+                            <div class="skill-icon-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuresqldatabase/azuresqldatabase-original.svg"
+                                    alt="SQL" />
+                            </div>
+                            <span>SQL DB</span>
+                        </div>
+                        <div class="skill-card" title="MongoDB NoSQL">
+                            <div class="skill-icon-wrapper">
+                                <img src="Assets/mongoDB.svg" alt="MongoDB"
+                                    onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg'" />
+                            </div>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="skill-card" title="Qdrant Vector Database for AI">
+                            <div class="skill-icon-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/qdrant/qdrant-original.svg"
+                                    alt="Qdrant DB" onerror="this.src='https://qdrant.tech/img/qdrant-logo.svg'" />
+                            </div>
+                            <span>Qdrant DB</span>
+                        </div>
+                        <div class="skill-card" title="Express.js & Node">
+                            <div class="skill-icon-wrapper">
+                                <img src="Assets/expressjs.svg" alt="Express.js"
+                                    onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg'; this.style.filter='invert(1)'" />
+                            </div>
+                            <span>Express.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-divider"></div>
+
+                <!-- Category 2: Frontend & UI Systems -->
+                <div class="skills-category-block">
+                    <h3 class="category-title">
+                        <span class="category-icon">🌐</span>
+                        Frontend & Client Applications
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" title="React JS">
+                            <div class="skill-icon-wrapper">
+                                <img src="Assets/React.svg" alt="React"
+                                    onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'" />
+                            </div>
+                            <span>React.js</span>
+                        </div>
+                        <div class="skill-card" title="Next.js">
+                            <div class="skill-icon-wrapper">
+                                <img src="Assets/Nextjs.svg" alt="Next.js"
+                                    onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg'; this.style.filter='invert(1)'" />
+                            </div>
+                            <span>Next.js</span>
+                        </div>
+                        <div class="skill-card" title="Astro Framework">
+                            <div class="skill-icon-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg"
+                                    alt="Astro"
+                                    onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-plain.svg'; this.style.filter='invert(1)'" />
+                            </div>
+                            <span>Astro</span>
+                        </div>
+                        <div class="skill-card" title="Tailwind CSS">
+                            <div class="skill-icon-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                                    alt="Tailwind" />
+                            </div>
+                            <span>Tailwind</span>
+                        </div>
+                        <div class="skill-card" title="HTML5 & CSS3">
+                            <div class="skill-icon-wrapper">
+                                <img src="Assets/HTML.svg" alt="HTML5"
+                                    onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'" />
+                            </div>
+                            <span>HTML5 / CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-divider"></div>
+
+                <!-- Category 3: Languages & Core CS -->
+                <div class="skills-category-block">
+                    <h3 class="category-title">
+                        <span class="category-icon">🛠️</span>
+                        Languages & Ecosystem
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" title="Java Enterprise">
+                            <div class="skill-icon-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                    alt="Java" />
+                            </div>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-card" title="Python Programming">
+                            <div class="skill-icon-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                    alt="Python" />
+                            </div>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-card" title="JavaScript Programming">
+                            <div class="skill-icon-wrapper">
+                                <img src="Assets/JS.svg" alt="JavaScript"
+                                    onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'" />
+                            </div>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-card" title="C++ Programming">
+                            <div class="skill-icon-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                                    alt="C++" />
+                            </div>
+                            <span>C++</span>
+                        </div>
+                        <div class="skill-card" title="C# Desktop Dev">
+                            <div class="skill-icon-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+                                    alt="C#" />
+                            </div>
+                            <span>C#</span>
+                        </div>
+                        <div class="skill-card" title="Git Version Control">
+                            <div class="skill-icon-wrapper">
+                                <img src="Assets/git.svg" alt="Git"
+                                    onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg'" />
+                            </div>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-card" title="Hugo Framework">
+                            <div class="skill-icon-wrapper">
+                                <img src="Assets/nuxtjs.svg" alt="Hugo"
+                                    onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hugo/hugo-original.svg'" />
+                            </div>
+                            <span>Hugo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-divider"></div>
+
+                <!-- Category 4: Architecture & Management -->
+                <div class="skills-category-block">
+                    <h3 class="category-title">
+                        <span class="category-icon">📐</span>
+                        Architecture & Management
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" title="System Design & Scalable Microservices Architecture">
+                            <div class="skill-icon-wrapper custom-skill-badge" style="background: rgba(56, 189, 248, 0.1); border-color: rgba(56, 189, 248, 0.25);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="8" height="8" rx="2"></rect><rect x="14" y="2" width="8" height="8" rx="2"></rect><rect x="14" y="14" width="8" height="8" rx="2"></rect><rect x="2" y="14" width="8" height="8" rx="2"></rect><line x1="6" y1="10" x2="6" y2="14"></line><line x1="10" y1="6" x2="14" y2="6"></line><line x1="18" y1="10" x2="18" y2="14"></line><line x1="10" y1="18" x2="14" y2="18"></line></svg>
+                            </div>
+                            <span>System Design</span>
+                        </div>
+                        <div class="skill-card" title="Project Management & Agile Delivery Workflows">
+                            <div class="skill-icon-wrapper custom-skill-badge" style="background: rgba(168, 85, 247, 0.1); border-color: rgba(168, 85, 247, 0.25);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><path d="m9 14 2 2 4-4"></path></svg>
+                            </div>
+                            <span>Project Management</span>
+                        </div>
+                        <div class="skill-card" title="Project Planning & Roadmap Strategy">
+                            <div class="skill-icon-wrapper custom-skill-badge" style="background: rgba(52, 211, 153, 0.1); border-color: rgba(52, 211, 153, 0.25);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="M8 14h.01"></path><path d="M12 14h.01"></path><path d="M16 14h.01"></path><path d="M8 18h.01"></path><path d="M12 18h.01"></path></svg>
+                            </div>
+                            <span>Project Planning</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="section-container experience-section" id="experience">
+            <div class="section-header fade-up">
+                <span class="section-tagline">WORK HISTORY</span>
+                <h2 class="section-title">Experience</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="timeline-container">
+
+                <!-- Fiverr -->
+                <div class="timeline-item glass-panel fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-logo">
+                        <img src="Assets/fiverr.png" alt="Fiverr"
+                            onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/1/18/Fiverr_Logo_09.2020.svg';" />
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="role-title">Frontend Developer</h3>
+                                <h4 class="company-name">Fiverr (Freelance)</h4>
+                            </div>
+                            <span class="time-badge">3 Years</span>
+                        </div>
+                        <p class="timeline-desc">
+                            Delivered high-quality, custom web applications for global clients. Specialized in building
+                            pixel-perfect landing pages, stateful React web apps, static site optimization with Hugo,
+                            and seamless UI refactoring for client conversion.
+                        </p>
+                        <div class="tech-stack-tags">
+                            <span class="tag-pill">React JS</span>
+                            <span class="tag-pill">Next.js</span>
+                            <span class="tag-pill">Hugo</span>
+                            <span class="tag-pill">Tailwind CSS</span>
+                            <span class="tag-pill">UI Refactoring</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ghaznix -->
+                <div class="timeline-item glass-panel fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-logo">
+                        <img src="Assets/ghaznix.png" alt="Ghaznix"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                        <div class="fallback-logo" style="display:none;">Ghaznix</div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="role-title">Frontend Developer</h3>
+                                <h4 class="company-name">Ghaznix</h4>
+                            </div>
+                            <span class="time-badge">1 Year</span>
+                        </div>
+                        <p class="timeline-desc">
+                            Engineered responsive web applications and full-stack component interfaces. Worked closely
+                            on dynamic form viewers, REST API client integration, SQL/MongoDB database connections, and
+                            real-time state synchronization.
+                        </p>
+                        <div class="tech-stack-tags">
+                            <span class="tag-pill">React JS</span>
+                            <span class="tag-pill">Next.js</span>
+                            <span class="tag-pill">Express JS</span>
+                            <span class="tag-pill">SQL</span>
+                            <span class="tag-pill">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section-container education-section" id="education">
+            <div class="section-header fade-up">
+                <span class="section-tagline">ACADEMICS</span>
+                <h2 class="section-title">Education</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="timeline-container">
+                <!-- BIIT -->
+                <div class="timeline-item glass-panel fade-up">
+                    <div class="timeline-marker edu-marker"></div>
+                    <div class="timeline-logo">
+                        <img src="Assets/biit.png" alt="BIIT"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                        <div class="fallback-logo" style="display:none;">BIIT</div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="role-title">Bachelor of Science in Computer Science (BSCS)</h3>
+                                <h4 class="company-name">Barani Institute of Information Technology (BIIT)</h4>
+                            </div>
+                            <span class="time-badge edu-badge">2024 - 2028</span>
+                        </div>
+                        <p class="timeline-desc">
+                            Rigorous academic coursework focused on core computer science foundations, including
+                            Object-Oriented Programming (OOP), Data Structures & Algorithms, Database Systems, Computer
+                            Networks, Software Engineering, and C#/Java application development.
+                        </p>
+                        <div class="tech-stack-tags">
+                            <span class="tag-pill">BSCS</span>
+                            <span class="tag-pill">C++</span>
+                            <span class="tag-pill">Java</span>
+                            <span class="tag-pill">Python</span>
+                            <span class="tag-pill">C# (Desktop Dev)</span>
+                            <span class="tag-pill">Data Structures</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section-container projects-section" id="project">
+            <div class="section-header fade-up">
+                <span class="section-tagline">PORTFOLIO SHOWCASE</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="project-filters fade-up">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="backend">Backend & Microservices</button>
+                <button class="filter-btn" data-filter="ghaznix">Ghaznix Projects</button>
+                <button class="filter-btn" data-filter="react">Frontend Apps</button>
+                <button class="filter-btn" data-filter="systems">Systems & C++</button>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- Project: OnlyLink -->
+                <div class="project-card glass-panel fade-up" data-category="react ghaznix">
+                    <div class="project-card-header">
+                        <span class="project-badge">Ghaznix / Production Web App</span>
+                        <div class="project-card-actions">
+                            <a href="https://onlylink.click/" target="_blank" rel="noopener noreferrer"
+                                class="icon-link" aria-label="Visit Live Site">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">OnlyLink - Link in Bio Platform</h3>
+                        <p class="project-desc">
+                            A high-converting, modern "Link in Bio" creator platform built for consolidating digital
+                            links, optimizing click-through rates, managing customizable micro-landing pages, and
+                            tracking engagement analytics.
+                        </p>
+                    </div>
+                    <div class="project-card-footer">
+                        <div class="project-tech-tags">
+                            <span>Ghaznix</span>
+                            <span>React</span>
+                            <span>Next.js</span>
+                            <span>Tailwind CSS</span>
+                            <span>REST APIs</span>
+                        </div>
+                        <div class="project-card-footer-action">
+                            <a href="https://onlylink.click/" target="_blank" rel="noopener noreferrer"
+                                class="project-link">
+                                <span>Visit Live Site</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: AI-Based Quiz App -->
+                <div class="project-card glass-panel fade-up" data-category="backend">
+                    <div class="project-card-header">
+                        <span class="project-badge">Spring Boot / RAG / gRPC</span>
+                        <div class="project-card-actions">
+                            <a href="https://github.com/Saeed24Shariq/AI-Based-Quiz-App" target="_blank"
+                                rel="noopener noreferrer" class="icon-link" aria-label="GitHub Repository">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                    </path>
+                                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">AI-Based Quiz Application</h3>
+                        <p class="project-desc">
+                            An intelligent AI-powered quiz platform built with Java Spring Boot, microservices
+                            architecture, gRPC, RAG (Retrieval-Augmented Generation), and Spring Data JPA for dynamic
+                            question generation and context retrieval.
+                        </p>
+                    </div>
+                    <div class="project-card-footer">
+                        <div class="project-tech-tags">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>Microservices</span>
+                            <span>gRPC</span>
+                            <span>RAG</span>
+                            <span>Qdrant DB</span>
+                            <span>PostgreSQL</span>
+                            <span>JPA</span>
+                            <span>Ollama</span>
+                            <span>nomic-embed-text</span>
+                        </div>
+                        <div class="project-card-footer-action">
+                            <a href="https://github.com/Saeed24Shariq/AI-Based-Quiz-App" target="_blank"
+                                rel="noopener noreferrer" class="project-link">
+                                <span>View Repository</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: Video Subtitling Service -->
+                <div class="project-card glass-panel fade-up" data-category="backend">
+                    <div class="project-card-header">
+                        <span class="project-badge">Spring Boot / Microservices</span>
+                        <div class="project-card-actions">
+                            <a href="https://github.com/Saeed24Shariq/Video-Subtitling-Service" target="_blank"
+                                rel="noopener noreferrer" class="icon-link" aria-label="GitHub Repository">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                    </path>
+                                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Video Subtitling Service</h3>
+                        <p class="project-desc">
+                            An automated AI-powered video subtitling service built with Java Spring Boot and
+                            microservices architecture to generate, sync, and burn accurate closed-caption subtitles
+                            using speech recognition integration and distributed audio-video processing pipelines.
+                        </p>
+                    </div>
+                    <div class="project-card-footer">
+                        <div class="project-tech-tags">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>Microservices</span>
+                            <span>Bulkhead Pattern</span>
+                            <span>Speech-to-Text</span>
+                            <span>FFmpeg</span>
+                        </div>
+                        <div class="project-card-footer-action">
+                            <a href="https://github.com/Saeed24Shariq/Video-Subtitling-Service" target="_blank"
+                                rel="noopener noreferrer" class="project-link">
+                                <span>View Repository</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: Media Transcoder Full App -->
+                <div class="project-card glass-panel fade-up" data-category="backend">
+                    <div class="project-card-header">
+                        <span class="project-badge">Spring Boot / Microservices</span>
+                        <div class="project-card-actions">
+                            <a href="https://github.com/Saeed24Shariq/Media-Transcoder-Full-App" target="_blank"
+                                rel="noopener noreferrer" class="icon-link" aria-label="GitHub Repository">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                    </path>
+                                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Media Transcoder Full Application</h3>
+                        <p class="project-desc">
+                            A high-throughput distributed media processing system engineered with Java Spring Boot
+                            microservices architecture to asynchronously transcode, re-encode, and convert video streams
+                            with automated task queue management and dynamic bitrates.
+                        </p>
+                    </div>
+                    <div class="project-card-footer">
+                        <div class="project-tech-tags">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>Microservices</span>
+                            <span>FFmpeg</span>
+                            <span>Task Queues</span>
+                        </div>
+                        <div class="project-card-footer-action">
+                            <a href="https://github.com/Saeed24Shariq/Media-Transcoder-Full-App" target="_blank"
+                                rel="noopener noreferrer" class="project-link">
+                                <span>View Repository</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: Employee Leave Management System -->
+                <div class="project-card glass-panel fade-up" data-category="backend">
+                    <div class="project-card-header">
+                        <span class="project-badge">Spring Boot / gRPC</span>
+                        <div class="project-card-actions">
+                            <a href="https://github.com/Saeed24Shariq/Employee-Leave-Management-System" target="_blank"
+                                rel="noopener noreferrer" class="icon-link" aria-label="GitHub Repository">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                    </path>
+                                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Employee Leave Management System</h3>
+                        <p class="project-desc">
+                            An enterprise-grade backend management application designed for automated leave tracking,
+                            role-based approval workflows, leave balance calculations, and audit records built with Java
+                            Spring Boot and gRPC.
+                        </p>
+                    </div>
+                    <div class="project-card-footer">
+                        <div class="project-tech-tags">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>gRPC</span>
+                            <span>REST API</span>
+                            <span>SQL</span>
+                        </div>
+                        <div class="project-card-footer-action">
+                            <a href="https://github.com/Saeed24Shariq/Employee-Leave-Management-System" target="_blank"
+                                rel="noopener noreferrer" class="project-link">
+                                <span>View Repository</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 1: Hotel Management System -->
+                <div class="project-card glass-panel fade-up" data-category="systems">
+                    <div class="project-card-header">
+                        <span class="project-badge">C++ / OOP</span>
+                        <div class="project-card-actions">
+                            <a href="https://github.com/Saeed24Shariq/Hotel-Management-System" target="_blank"
+                                rel="noopener noreferrer" class="icon-link" aria-label="GitHub Repository">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                    </path>
+                                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Hotel Management System</h3>
+                        <p class="project-desc">
+                            A comprehensive console-based hotel management application built in C++. Leverages core
+                            Object-Oriented Programming (OOP) principles like inheritance, polymorphism, encapsulation,
+                            and file handling to manage room bookings, customer records, and billing operations cleanly.
+                        </p>
+                    </div>
+                    <div class="project-card-footer">
+                        <div class="project-tech-tags">
+                            <span>C++</span>
+                            <span>OOP</span>
+                            <span>File I/O</span>
+                        </div>
+                        <a href="https://github.com/Saeed24Shariq/Hotel-Management-System" target="_blank"
+                            rel="noopener noreferrer" class="project-link">
+                            <span>View Repository</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: T-Stack -->
+                <div class="project-card glass-panel fade-up" data-category="systems">
+                    <div class="project-card-header">
+                        <span class="project-badge">Hugo / Go Template</span>
+                        <div class="project-card-actions">
+                            <a href="https://github.com/Saeed24Shariq/T-Stack" target="_blank" rel="noopener noreferrer"
+                                class="icon-link" aria-label="GitHub Repository">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                    </path>
+                                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">T-Stack Repository Site</h3>
+                        <p class="project-desc">
+                            A lightning-fast, modern static documentation and repository site built entirely using the
+                            Hugo framework. Heavily utilizes Go templating, custom shortcodes, and Markdown to render
+                            SEO-optimized static pages with instant page loads.
+                        </p>
+                    </div>
+                    <div class="project-card-footer">
+                        <div class="project-tech-tags">
+                            <span>Hugo</span>
+                            <span>Go HTML</span>
+                            <span>SEO</span>
+                        </div>
+                        <a href="https://github.com/Saeed24Shariq/T-Stack" target="_blank" rel="noopener noreferrer"
+                            class="project-link">
+                            <span>View Repository</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Chat App -->
+                <div class="project-card glass-panel fade-up" data-category="backend">
+                    <div class="project-card-header">
+                        <span class="project-badge">Express & WebSockets</span>
+                        <div class="project-card-actions">
+                            <a href="https://github.com/Saeed24Shariq/ChatApp--Express-" target="_blank"
+                                rel="noopener noreferrer" class="icon-link" aria-label="GitHub Repository">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                    </path>
+                                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Real-Time Chat Application</h3>
+                        <p class="project-desc">
+                            A real-time messaging platform developed for Computer Networks. Features an Express.js
+                            backend handling full-duplex socket data streams via WebSockets (Socket.io), instantly
+                            broadcasting messages between multiple clients without HTTP polling.
+                        </p>
+                    </div>
+                    <div class="project-card-footer">
+                        <div class="project-tech-tags">
+                            <span>Express.js</span>
+                            <span>Socket.io</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="https://github.com/Saeed24Shariq/ChatApp--Express-" target="_blank"
+                            rel="noopener noreferrer" class="project-link">
+                            <span>View Repository</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4: E-Commerce App -->
+                <div class="project-card glass-panel fade-up" data-category="react">
+                    <div class="project-card-header">
+                        <span class="project-badge">React JS</span>
+                        <div class="project-card-actions">
+                            <a href="https://github.com/Saeed24Shariq/Shopping-App-React-" target="_blank"
+                                rel="noopener noreferrer" class="icon-link" aria-label="GitHub Repository">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                    </path>
+                                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Interactive E-Commerce App</h3>
+                        <p class="project-desc">
+                            A dynamic storefront application built with React JS. Features a robust shopping cart state
+                            manager, Context API data flow, product filtering by category, responsive layout components,
+                            and intuitive checkout flow.
+                        </p>
+                    </div>
+                    <div class="project-card-footer">
+                        <div class="project-tech-tags">
+                            <span>React</span>
+                            <span>Context API</span>
+                            <span>CSS Modules</span>
+                        </div>
+                        <a href="https://github.com/Saeed24Shariq/Shopping-App-React-" target="_blank"
+                            rel="noopener noreferrer" class="project-link">
+                            <span>View Repository</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5: Expense Tracker App -->
+                <div class="project-card glass-panel fade-up" data-category="react">
+                    <div class="project-card-header">
+                        <span class="project-badge">React JS / Hooks</span>
+                        <div class="project-card-actions">
+                            <a href="https://github.com/Saeed24Shariq/Expense-Tracker-Using-React" target="_blank"
+                                rel="noopener noreferrer" class="icon-link" aria-label="GitHub Repository">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                    </path>
+                                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Expense Tracker Application</h3>
+                        <p class="project-desc">
+                            A utility-focused stateful web application designed to help users track and balance
+                            expenses. Built with custom React hooks (`useState`, `useReducer`, `useEffect`) and
+                            localStorage persistence to save user data across reloads.
+                        </p>
+                    </div>
+                    <div class="project-card-footer">
+                        <div class="project-tech-tags">
+                            <span>React</span>
+                            <span>React Hooks</span>
+                            <span>Local Storage</span>
+                        </div>
+                        <a href="https://github.com/Saeed24Shariq/Expense-Tracker-Using-React" target="_blank"
+                            rel="noopener noreferrer" class="project-link">
+                            <span>View Repository</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 6: Ghaznix Form System -->
+                <div class="project-card glass-panel fade-up" data-category="react ghaznix">
+                    <div class="project-card-header">
+                        <span class="project-badge">Ghaznix / Production Form System</span>
+                        <div class="project-card-actions">
+                            <a href="https://ghaznix.com/" target="_blank" rel="noopener noreferrer" class="icon-link"
+                                aria-label="Visit Ghaznix">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Ghaznix Dynamic Form System</h3>
+                        <p class="project-desc">
+                            A dynamic form generator and viewer built for Ghaznix. Handles multi-step form schemas,
+                            complex client-side validation logic, and RESTful endpoint submissions for seamless
+                            enterprise form workflows.
+                        </p>
+                    </div>
+                    <div class="project-card-footer">
+                        <div class="project-tech-tags">
+                            <span>Ghaznix</span>
+                            <span>React JS</span>
+                            <span>Formik / State</span>
+                            <span>REST APIs</span>
+                        </div>
+                        <div class="project-card-footer-action">
+                            <a href="https://ghaznix.com/" target="_blank" rel="noopener noreferrer"
+                                class="project-link">
+                                <span>Visit Ghaznix</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section-container contact-section" id="contact">
+            <div class="section-header fade-up">
+                <span class="section-tagline">LET'S CONNECT</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="contact-grid">
+
+                <div class="contact-info-col fade-up">
+                    <div class="contact-card glass-panel">
+                        <div class="contact-card-header">
+                            <div class="contact-icon-bubble">💬</div>
+                            <div>
+                                <h3>Let's work together</h3>
+                                <p>Have a project in mind, a question, or an opportunity? Feel free to reach out!</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-methods">
+                            <a href="mailto:shariqggood@gmail.com" class="method-item">
+                                <div class="method-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                    </svg>
+                                </div>
+                                <div class="method-details">
+                                    <span class="method-label">Direct Email</span>
+                                    <span class="method-value">shariqggood@gmail.com</span>
+                                </div>
+                            </a>
+
+                            <div class="method-item">
+                                <div class="method-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div class="method-details">
+                                    <span class="method-label">Location</span>
+                                    <span class="method-value">Rawalpindi / Islamabad, Pakistan</span>
+                                </div>
+                            </div>
+
+                            <a href="https://pk.linkedin.com/in/shariqsaeed24" target="_blank" rel="noopener noreferrer"
+                                class="method-item">
+                                <div class="method-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                        </path>
+                                        <rect x="2" y="9" width="4" height="12"></rect>
+                                        <circle cx="4" cy="4" r="2"></circle>
+                                    </svg>
+                                </div>
+                                <div class="method-details">
+                                    <span class="method-label">LinkedIn</span>
+                                    <span class="method-value">in/shariqsaeed24</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-col fade-up">
+                    <div class="contact-wrapper glass-panel">
+                        <form action="https://formsubmit.co/shariqggood@gmail.com" method="POST" class="contact-form">
+                            <!-- Formsubmit options -->
+                            <input type="hidden" name="_subject" value="New Portfolio Message for Shariq Saeed!">
+                            <input type="hidden" name="_captcha" value="false">
+
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required placeholder=" " />
+                                <label for="name">Your Name</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" name="email" id="email" required placeholder=" " />
+                                <label for="email">Your Email Address</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="tel" name="tel" id="tel" placeholder=" " />
+                                <label for="tel">Phone Number (Optional)</label>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea name="message" id="message" required placeholder=" " rows="5"></textarea>
+                                <label for="message">Your Message</label>
+                            </div>
+
+                            <button type="submit" class="btn-primary form-submit">
+                                <span>Send Message</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-text">Shariq<span class="brand-accent">.dev</span></span>
+                    <p>Crafting modern web products with passion and precision.</p>
+                </div>
+
+                <div class="footer-socials">
+                    <a href="mailto:shariqggood@gmail.com" target="_blank" aria-label="Email">Email</a>
+                    <a href="https://github.com/Saeed24Shariq" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub">GitHub</a>
+                    <a href="https://pk.linkedin.com/in/shariqsaeed24" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn">LinkedIn</a>
+                </div>
+
+                <div class="footer-copyright">
+                    <p>&copy; <span id="currentYear">2026</span> <span class="highlight">Shariq Saeed</span>. Built with
+                        clean code & modern CSS.</p>
+                </div>
+            </div>
+
+            <a href="#hero" class="back-to-top" id="backToTop" aria-label="Scroll to top">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="19" x2="12" y2="5"></line>
+                    <polyline points="5 12 12 5 19 12"></polyline>
+                </svg>
+            </a>
+        </footer>
+
     </div>
 
-    <section class="about" id="about">
-        <h1 class="section-title">About Me</h1>
-        <div class="intro">
-            <p>
-                I specialize in building responsive, user-friendly web interfaces with a focus on clean design and efficient code. Passionate about crafting seamless user experiences, I enjoy turning ideas into interactive digital products.
-            </p>
-        </div>
-        <div class="key-points-con">
-            <div class="key-points glass-panel">
-                <div class="icon-wrapper">🪄</div>
-                <h3>DESIGN</h3>
-                <p>Translating UI/UX concepts into interactive, responsive, and visually appealing web interfaces. It includes working closely with designers to implement layouts, styles, and animations using HTML, CSS, and JavaScript.</p>
-            </div>
-            <div class="key-points glass-panel">
-                <div class="icon-wrapper">💻</div>
-                <h3>DEVELOPMENT</h3>
-                <p>Preparing and delivering the client-side code to a live environment. Building frontend assets, optimizing performance, and integrating with robust backend architectures.</p>
-            </div>
-            <div class="key-points glass-panel">
-                <div class="icon-wrapper">🛠️</div>
-                <h3>MAINTENANCE</h3>
-                <p>Updating UI components, fixing layout or responsiveness issues, improving page load times, and ensuring compatibility with browser updates and evolving web standards.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="skills" id="skills">
-        <h1 class="section-title">Skills</h1>
-        <div class="skills-con glass-panel">
-            <div class="skills-category">
-                <h3>Current Stack</h3>
-                <div class="skills-grid">
-                    <div class="skill-item" title="HTML">
-                        <img src="Assets/HTML.svg" alt="HTML" onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'" />
-                        <span>HTML5</span>
-                    </div>
-                    <div class="skill-item" title="CSS">
-                        <img src="Assets/CSS.svg" alt="CSS" onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'" />
-                        <span>CSS3</span>
-                    </div>
-                    <div class="skill-item" title="JavaScript">
-                        <img src="Assets/JS.svg" alt="JS" onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'" />
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="skill-item" title="React">
-                        <img src="Assets/React.svg" alt="React" onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'" />
-                        <span>React</span>
-                    </div>
-                    <div class="skill-item" title="Tailwind">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" />
-                        <span>Tailwind</span>
-                    </div>
-                    <div class="skill-item" title="Bootstrap">
-                        <img src="Assets/bootstrap.svg" alt="Bootstrap" onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg'" />
-                        <span>Bootstrap</span>
-                    </div>
-                    <div class="skill-item" title="Git">
-                        <img src="Assets/git.svg" alt="GIT" onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg'" />
-                        <span>Git</span>
-                    </div>
-                    <div class="skill-item" title="Next.js">
-                        <img src="Assets/Nextjs.svg" alt="NEXTJS" onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg'; this.style.filter='invert(1)'" />
-                        <span>Next.js</span>
-                    </div>
-                    <div class="skill-item" title="Express.js">
-                        <img src="Assets/expressjs.svg" alt="ExpressJS" onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg'; this.style.filter='invert(1)'" />
-                        <span>Express</span>
-                    </div>
-                    <div class="skill-item" title="MongoDB">
-                        <img src="Assets/mongoDB.svg" alt="Mongo DB" onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg'" />
-                        <span>MongoDB</span>
-                    </div>
-                    <div class="skill-item" title="Python">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
-                        <span>Python</span>
-                    </div>
-                    <div class="skill-item" title="Java Spring Boot">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" />
-                        <span>Spring Boot</span>
-                    </div>
-                    <div class="skill-item" title="SQL">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuresqldatabase/azuresqldatabase-original.svg" alt="SQL" />
-                        <span>SQL</span>
-                    </div>
-                    <div class="skill-item" title="C# Desktop Development">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" />
-                        <span>C#</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="education" id="education">
-        <h1 class="section-title">Education</h1>
-        <div class="experience-timeline">
-            <!-- BIIT -->
-            <div class="exp-item glass-panel fade-up">
-                <div class="exp-logo">
-                    <img src="Assets/biit.png" alt="BIIT Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-                    <div class="text-logo" style="display:none; font-weight:800; font-size:16px; color:#f8fafc; font-family:'Outfit', sans-serif;">BIIT</div>
-                </div>
-                <div class="exp-content">
-                    <h3>BSCS</h3>
-                    <h4 class="company">Barani Institute of Information Technology (BIIT)</h4>
-                    <span class="duration">2024 - 2028</span>
-                    <div class="exp-tags">
-                        <span class="exp-tag">BSCS</span>
-                        <span class="exp-tag">Communication</span>
-                        <span class="exp-tag">C++</span>
-                        <span class="exp-tag">JAVA</span>
-                        <span class="exp-tag">Python</span>
-                        <span class="exp-tag">C# (Desktop Development)</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="experience" id="experience">
-        <h1 class="section-title">Experience</h1>
-        <div class="experience-timeline">
-            <!-- Fiverr -->
-            <div class="exp-item glass-panel fade-up">
-                <div class="exp-logo">
-                    <img src="Assets/fiverr.png" alt="Fiverr Logo" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/1/18/Fiverr_Logo_09.2020.svg';" />
-                </div>
-                <div class="exp-content">
-                    <h3>Frontend Developer</h3>
-                    <h4 class="company">Fiverr</h4>
-                    <span class="duration">3 Years</span>
-                    <div class="exp-tags">
-                        <span class="exp-tag">React JS</span>
-                        <span class="exp-tag">Next JS</span>
-                        <span class="exp-tag">Hugo</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Ghaznix -->
-            <div class="exp-item glass-panel fade-up">
-                <div class="exp-logo">
-                    <img src="Assets/ghaznix.png" alt="Ghaznix Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-                    <div class="text-logo" style="display:none; font-weight:800; font-size:16px; color:#f8fafc; font-family:'Outfit', sans-serif;">Ghaznix</div>
-                </div>
-                <div class="exp-content">
-                    <h3>Frontend Developer</h3>
-                    <h4 class="company">Ghaznix</h4>
-                    <span class="duration">1 Year</span>
-                    <div class="exp-tags">
-                        <span class="exp-tag">React JS</span>
-                        <span class="exp-tag">Next JS</span>
-                        <span class="exp-tag">Express JS</span>
-                        <span class="exp-tag">SQL</span>
-                        <span class="exp-tag">Mongo DB</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="projects-con" id="project">
-        <h1 class="section-title">Projects</h1>
-        <div class="project-section">
-            <div class="project glass-panel">
-                <div class="project-content">
-                    <div class="proj-badge">C++</div>
-                    <h4>Hotel Management System</h4>
-                    <p>A comprehensive console-based hotel management application built as a First Semester Project in C++. It leverages core Object-Oriented Programming (OOP) concepts like classes, inheritance, polymorphism, and file handling to manage room bookings, customer records, and billing operations, demonstrating a strong foundation in raw computational logic.</p>
-                    <a href="https://github.com/Saeed24Shariq/Hotel-Management-System" target="_blank" class="btn-secondary" style="margin-top: 15px;">View Repository <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-                </div>
-            </div>
-
-            <div class="project glass-panel">
-                <div class="project-content">
-                    <div class="proj-badge">Hugo</div>
-                    <h4>T-Stack</h4>
-                    <p>A lightning-fast, modern static repository site built entirely using the Hugo framework. This project heavily utilizes Go templating, custom shortcodes, and Markdown to generate SEO-optimized static pages, offering near-instant page load speeds and showcasing proficiency with industry-standard static site generators.</p>
-                    <a href="https://github.com/Saeed24Shariq/T-Stack" target="_blank" class="btn-secondary" style="margin-top: 15px;">View Repository <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-                </div>
-            </div>
-
-            <div class="project glass-panel">
-                <div class="project-content">
-                    <div class="proj-badge">Express JS & WebSockets</div>
-                    <h4>Chat App (Computer Networks Project)</h4>
-                    <p>A real-time messaging platform developed as a Computer Networks university project. It features an Express.js backend server handling continuous two-way data streams via WebSockets (Socket.io), connected to a responsive HTML/CSS frontend. It dynamically broadcasts messages instantly between multiple clients without relying on traditional HTTP polling.</p>
-                    <a href="https://github.com/Saeed24Shariq/ChatApp--Express-" target="_blank" class="btn-secondary" style="margin-top: 15px;">View Repository <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-                </div>
-            </div>
-
-            <div class="project glass-panel">
-                <div class="project-content">
-                    <div class="proj-badge">React JS</div>
-                    <h4>E-Commerce App</h4>
-                    <p>A dynamic and fully interactive E-Commerce storefront frontend built natively with React JS. The application features a robust shopping cart system, context-based state management, complex product filtering criteria, and highly responsive UI components designed with a heavy emphasis on seamless user experience (UX).</p>
-                    <a href="https://github.com/Saeed24Shariq/Shopping-App-React-" target="_blank" class="btn-secondary" style="margin-top: 15px;">View Repository <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-                </div>
-            </div>
-
-            <div class="project glass-panel">
-                <div class="project-content">
-                    <div class="proj-badge">React JS</div>
-                    <h4>Expense Tracker App</h4>
-                    <p>A utility-focused stateful React web application designed to help users efficiently track, monitor, and categorize their daily expenses. It provides intuitive data inputs and relies heavily on complex React hooks (useState, useEffect, useReducer) alongside local storage to manage and persist crucial budgetary data across user sessions.</p>
-                    <a href="https://github.com/Saeed24Shariq/Expense-Tracker-Using-React" target="_blank" class="btn-secondary" style="margin-top: 15px;">View Repository <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-                </div>
-            </div>
-
-            <div class="project glass-panel">
-                <div class="project-content">
-                    <div class="proj-badge">React JS</div>
-                    <h4>Ghaznix Form</h4>
-                    <p>A highly complex, custom form viewer and management system built with React JS. It handles extensive dynamic inputs, multi-step frontend validation logic, and secure RESTful API integrations to successfully process, store, and display form submissions via external backends.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <h1 class="section-title">Contact</h1>
-        <div class="contact-wrapper glass-panel">
-            <form action="https://formsubmit.co/shariqggood@gmail.com" method="POST" class="contact-form">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" required placeholder=" " />
-                    <label for="name">Your Name</label>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" id="email" required placeholder=" " />
-                    <label for="email">Your Email</label>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="tel" id="tel" pattern="^\d+$" placeholder=" " />
-                    <label for="tel">Phone Number</label>
-                </div>
-                <div class="form-group">
-                    <textarea name="message" id="message" required placeholder=" " rows="4"></textarea>
-                    <label for="message">Your Message</label>
-                </div>
-                <button type="submit" class="btn-primary form-submit">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 <span class="highlight">Shariq Saeed</span>. All Rights Reserved.</p>
-    </footer>
-
+    <!-- Scripts -->
     <script>
-        // Smooth scrolling for anchor links
+        // Set dynamic copyright year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mouse Spotlight tracking
+        const mouseSpotlight = document.getElementById('mouseSpotlight');
+        document.addEventListener('mousemove', (e) => {
+            if (mouseSpotlight) {
+                mouseSpotlight.style.left = e.clientX + 'px';
+                mouseSpotlight.style.top = e.clientY + 'px';
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+                menuToggle.setAttribute('aria-expanded', !expanded);
+                menuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close mobile menu on link click
+            document.querySelectorAll('.nav-link, .nav-btn').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        // Smooth Scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const targetId = this.getAttribute('href');
+                if (targetId && targetId !== '#') {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
             });
         });
 
-        // Add intersection observer for fade-in animations
+        // Intersection Observer for Fade-Up Animations
         const observerOptions = {
             root: null,
-            rootMargin: '0px',
+            rootMargin: '0px 0px -50px 0px',
             threshold: 0.1
         };
 
-        const observer = new IntersectionObserver((entries, observer) => {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
@@ -384,9 +1406,48 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.glass-panel, .section-title, .intro').forEach(el => {
-            el.classList.add('fade-up');
-            observer.observe(el);
+        document.querySelectorAll('.fade-up').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // Project Filter Tabs
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    if (filterValue === 'all' || (category && category.includes(filterValue))) {
+                        card.style.display = 'flex';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 50);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Back to Top Button Visibility
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTopBtn?.classList.add('visible');
+            } else {
+                backToTopBtn?.classList.remove('visible');
+            }
         });
     </script>
 </body>
