@@ -9,7 +9,7 @@
     --bg-dark-alt: #121215;
     --bg-card: rgba(24, 24, 27, 0.75);
     --bg-glass: rgba(255, 255, 255, 0.03);
-    
+
     --glass-border: rgba(255, 255, 255, 0.1);
     --glass-border-hover: rgba(255, 255, 255, 0.3);
     --glass-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.9);
@@ -35,7 +35,9 @@
 }
 
 /* --- Base & Reset --- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -84,7 +86,15 @@ body {
 }
 
 /* --- Typography Helpers --- */
-h1, h2, h3, h4, h5, h6, .brand-text, .section-title, .role-title {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.brand-text,
+.section-title,
+.role-title {
     font-family: var(--font-heading);
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -171,7 +181,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
+    background-image:
         linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     background-size: 60px 60px;
@@ -180,9 +190,17 @@ img {
 }
 
 @keyframes orbFloat {
-    0% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(60px, -40px) scale(1.1); }
-    100% { transform: translate(-40px, 60px) scale(0.95); }
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(60px, -40px) scale(1.1);
+    }
+
+    100% {
+        transform: translate(-40px, 60px) scale(0.95);
+    }
 }
 
 /* --- Glassmorphism Reusable Panel --- */
@@ -338,8 +356,15 @@ img {
 }
 
 @keyframes navSlideDown {
-    from { transform: translateY(-100%); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .nav-brand {
@@ -549,8 +574,15 @@ img {
 }
 
 @keyframes ringGlow {
-    0% { opacity: 0.2; transform: scale(0.98); }
-    100% { opacity: 0.4; transform: scale(1.02); }
+    0% {
+        opacity: 0.2;
+        transform: scale(0.98);
+    }
+
+    100% {
+        opacity: 0.4;
+        transform: scale(1.02);
+    }
 }
 
 .avatar-img {
@@ -561,8 +593,8 @@ img {
     object-fit: cover;
     object-position: top center;
     border-radius: 24px;
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
 }
 
 /* Floating Micro Badges */
@@ -622,8 +654,13 @@ img {
 }
 
 @keyframes badgeFloat {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-12px); }
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-12px);
+    }
 }
 
 /* ==========================================================================
@@ -870,7 +907,7 @@ img {
 .skill-icon-wrapper img {
     height: 36px;
     width: auto;
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4));
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.4));
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -1392,10 +1429,10 @@ img {
 }
 
 /* Floating Label Logic */
-.form-group input:focus ~ label,
-.form-group input:not(:placeholder-shown) ~ label,
-.form-group textarea:focus ~ label,
-.form-group textarea:not(:placeholder-shown) ~ label {
+.form-group input:focus~label,
+.form-group input:not(:placeholder-shown)~label,
+.form-group textarea:focus~label,
+.form-group textarea:not(:placeholder-shown)~label {
     top: -10px;
     left: 14px;
     font-size: 12px;
@@ -1501,6 +1538,354 @@ img {
 }
 
 /* ==========================================================================
+   AWARDS & ACHIEVEMENTS SECTION
+   ========================================================================== */
+.awards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.award-card {
+    padding: 36px;
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.award-card:hover {
+    border-color: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.95), 0 0 40px rgba(255, 255, 255, 0.08);
+}
+
+.award-image-container {
+    position: relative;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid var(--glass-border);
+    background: rgba(0, 0, 0, 0.4);
+    aspect-ratio: 3 / 4;
+    max-height: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.award-image-container:hover {
+    transform: scale(1.02);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.award-img-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.award-image-container:hover .award-img-glow {
+    opacity: 1;
+}
+
+.award-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    transition: transform 0.5s ease;
+}
+
+.award-image-container:hover .award-img {
+    transform: scale(1.05);
+}
+
+.award-floating-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(9, 9, 11, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.award-floating-badge svg {
+    color: #facc15;
+}
+
+.award-img-hint {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px 16px;
+    background: linear-gradient(to top, rgba(9, 9, 11, 0.9) 0%, transparent 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #e4e4e7;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 3;
+}
+
+.award-image-container:hover .award-img-hint {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.award-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.award-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.award-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.award-icon-bubble {
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.award-title {
+    font-size: 24px;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.award-organization {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+.award-year-badge {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.award-desc {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.award-desc strong {
+    color: #ffffff;
+}
+
+/* Team Member Appreciation Box */
+.team-appreciation-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 16px 20px;
+    transition: all 0.3s ease;
+}
+
+.team-appreciation-box:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.team-appreciation-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+}
+
+.team-appreciation-header svg {
+    color: #e4e4e7;
+}
+
+.team-member-info {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.team-member-info strong {
+    color: #ffffff;
+}
+
+.team-member-link {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 600;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.team-member-link:hover {
+    color: #e4e4e7;
+    text-decoration-color: #ffffff;
+}
+
+.award-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.highlight-chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #e4e4e7;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    padding: 6px 14px;
+    border-radius: 12px;
+}
+
+.highlight-chip svg {
+    color: #ffffff;
+}
+
+.award-tags {
+    margin-top: 4px;
+}
+
+/* Image Lightbox Modal Styling */
+.image-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.image-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.image-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.image-modal-content {
+    position: relative;
+    z-index: 2;
+    max-width: 90vw;
+    max-height: 90vh;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.95);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.image-modal.active .image-modal-content {
+    transform: scale(1);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: rgba(77, 77, 77, 0.816);
+    border: 1px solid var(--glass-border);
+    color: #ffffff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.modal-close-btn:hover {
+    background: rgba(77, 77, 77, 0.759);
+    transform: scale(1.1);
+}
+
+.modal-preview-img {
+    max-width: 100%;
+    max-height: calc(85vh - 60px);
+    object-fit: contain;
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+}
+
+.modal-caption {
+    font-size: 14px;
+    font-weight: 600;
+    color: #e4e4e7;
+    font-family: var(--font-heading);
+}
+
+/* ==========================================================================
    RESPONSIVE DESIGN BREAKPOINTS
    ========================================================================== */
 
@@ -1532,7 +1917,8 @@ img {
         flex-direction: column;
     }
 
-    .about-grid, .contact-grid {
+    .about-grid,
+    .contact-grid {
         grid-template-columns: 1fr;
     }
 
@@ -1554,6 +1940,16 @@ img {
     .skills-grid {
         grid-template-columns: repeat(auto-fill, minmax(115px, 1fr));
         gap: 14px;
+    }
+
+    .award-card {
+        grid-template-columns: 300px 1fr;
+        gap: 28px;
+        padding: 28px;
+    }
+
+    .award-image-container {
+        max-height: 380px;
     }
 }
 
@@ -1629,8 +2025,13 @@ img {
         font-size: 12px;
     }
 
-    .badge-react { left: -10px; }
-    .badge-next { right: -10px; }
+    .badge-react {
+        left: -10px;
+    }
+
+    .badge-next {
+        right: -10px;
+    }
 
     .section-title {
         font-size: 34px;
@@ -1701,8 +2102,85 @@ img {
         grid-template-columns: 1fr;
     }
 
-    .contact-card, .contact-wrapper {
+    .contact-card,
+    .contact-wrapper {
         padding: 24px;
+    }
+
+    /* Awards Mobile Adjustments */
+    .award-card {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .award-image-container {
+        width: 100%;
+        max-height: 360px;
+        aspect-ratio: 4 / 3;
+    }
+
+    .award-img {
+        object-position: center 20%;
+    }
+
+    .award-title-wrapper {
+        gap: 12px;
+    }
+
+    .award-icon-bubble {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+    }
+
+    .award-icon-bubble svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .award-title {
+        font-size: 20px;
+        line-height: 1.35;
+    }
+
+    .award-organization {
+        font-size: 13.5px;
+    }
+
+    .award-desc {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .team-appreciation-box {
+        padding: 14px 16px;
+        border-radius: 14px;
+    }
+
+    .team-appreciation-header {
+        font-size: 12px;
+    }
+
+    .team-member-info {
+        font-size: 13px;
+        line-height: 1.55;
+    }
+
+    .award-highlights {
+        gap: 8px;
+    }
+
+    .highlight-chip {
+        font-size: 12px;
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
+
+    .image-modal-content {
+        max-width: 94vw;
+        padding: 16px;
     }
 }
 
@@ -1753,5 +2231,84 @@ img {
     .skill-card span {
         font-size: 11px;
         line-height: 1.25;
+    }
+
+    /* Awards Small Mobile Adjustments */
+    .award-card {
+        padding: 16px;
+        gap: 18px;
+        border-radius: 16px;
+    }
+
+    .award-image-container {
+        max-height: 280px;
+        border-radius: 14px;
+        aspect-ratio: 4 / 3;
+    }
+
+    .award-floating-badge {
+        top: 10px;
+        left: 10px;
+        padding: 4px 10px;
+        font-size: 11px;
+    }
+
+    .award-title-wrapper {
+        gap: 10px;
+    }
+
+    .award-icon-bubble {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+    }
+
+    .award-icon-bubble svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .award-title {
+        font-size: 17px;
+    }
+
+    .award-organization {
+        font-size: 12.5px;
+    }
+
+    .award-year-badge {
+        font-size: 11px;
+        padding: 3px 10px;
+    }
+
+    .award-desc {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .team-appreciation-box {
+        padding: 12px 14px;
+    }
+
+    .team-member-info {
+        font-size: 12px;
+    }
+
+    .highlight-chip {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+
+    .award-tags .tag-pill {
+        font-size: 11px;
+        padding: 3px 8px;
+    }
+
+    .modal-close-btn {
+        top: 8px;
+        right: 8px;
+        width: 32px;
+        height: 32px;
+        font-size: 18px;
     }
 }
